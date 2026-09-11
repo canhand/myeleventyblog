@@ -6,33 +6,17 @@
 
 /* Theme colors */
 :root {
-	--color-gray-20: #e0e0e0;
-	--color-gray-50: #C0C0C0;
-	--color-gray-90: #333;
+	--color-border: rgba(245, 241, 233, 0.25); /* ceramic white, translucent, for dashed rules */
+	--color-muted: rgba(245, 241, 233, 0.65);  /* metadata/timestamps */
 
-	--background-color: #fff;
+	--background-color: #14149e;   /* Red Bull blue */
+	--text-color: #EBEBEB;         /* ceramic white */
 
-	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
+	--text-color-link: #ff3d1d;        /* Scuderia Ferrari red */
+	--text-color-link-active: #ed2100;
+	--text-color-link-visited: #be1a00;
 
 	--syntax-tab-size: 2;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-gray-20: #e0e0e0;
-		--color-gray-50: #C0C0C0;
-		--color-gray-90: #dad8d8;
-
-		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
-
-		--background-color: #15202b;
-	}
 }
 
 
@@ -97,7 +81,7 @@ main :first-child {
 }
 
 header {
-	border-bottom: 1px dashed var(--color-gray-20);
+	border-bottom: 1px dashed var(--color-border);
 }
 header:after {
 	content: "";
@@ -107,7 +91,7 @@ header:after {
 
 .links-nextprev {
 	list-style: none;
-	border-top: 1px dashed var(--color-gray-20);
+	border-top: 1px dashed var(--color-border);
 	padding: 1em 0;
 }
 
@@ -181,37 +165,24 @@ header {
 .postlist {
 	list-style: none;
 	padding: 0;
-	padding-left: 1.5rem;
 }
 .postlist-item {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: baseline;
-	counter-increment: start-from -1;
 	margin-bottom: 1em;
 }
-.postlist-item:before {
-	display: inline-block;
-	pointer-events: none;
-	content: "" counter(start-from, decimal-leading-zero) ". ";
-	line-height: 100%;
-	text-align: right;
-	margin-left: -1.5rem;
-}
-.postlist-date,
-.postlist-item:before {
-	font-size: 0.8125em; /* 13px /16 */
-	color: var(--color-gray-90);
-}
 .postlist-date {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-muted);
 	word-spacing: -0.5px;
 }
 .postlist-link {
 	font-size: 1.1875em; /* 19px /16 */
 	font-weight: 700;
-	flex-basis: calc(100% - 1.5rem);
-	padding-left: .25em;
+	flex-basis: 100%;
 	padding-right: .5em;
+	text-decoration: underline;
 	text-underline-position: from-font;
 	text-underline-offset: 0;
 	text-decoration-thickness: 1px;
@@ -262,7 +233,7 @@ a[href].header-anchor:hover {
 }
 a[href].header-anchor:focus,
 :hover > a[href].header-anchor {
-	color: #aaa;
+	color: var(--color-muted);
 }
 
 h2 + .header-anchor {
