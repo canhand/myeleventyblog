@@ -14,7 +14,7 @@ Well, I'm a human. Let's call me 'Chan'.
 
 This is the first time I've ever posted anything on the internet. Well, almost.
 
-[There's this one blog post from way way back.] (https://chandankgupta.blogspot.com/2009/02/what-ive-learned.html)
+[There's this one blog post from way way back.](https://chandankgupta.blogspot.com/2009/02/what-ive-learned.html)
 
 I maybe wrote a couple of testimonials on Orkut. One single poke on Facebook. A few likes, retweets, and Wordle score on Twitter/X. And a few private stories on Instagram for close friends only. Nothing else, as myself.
 
@@ -28,7 +28,7 @@ Hence, this. A place where I'll practice penning my thoughts.
 
 I was going to write the reasons for being like this - but you see, there's the problem right there. The goal of this particular post is not to write down reasons - but to introduce myself, this blog, set a goal, and move on to the next thing.
 
-F 'em reasons.
+***F 'em reasons.***
 
 ## Goal
 
@@ -50,4 +50,4 @@ Now I don't have the option to use any of those crutches. Nor were they going to
 
 So here it is. I'm back down to just will. That I've enough and more of.
 
-Let's go internet!
+## *Let's go internet!*

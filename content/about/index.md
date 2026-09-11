@@ -6,4 +6,4 @@ eleventyNavigation:
 ---
 # About Me
 
-I am a person that writes stuff.
+I'm a human, who can think, can fast, and can wait. But this blog is meant for being fast, especially with thinking, and not waiting.
