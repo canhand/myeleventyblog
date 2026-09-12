@@ -8,7 +8,8 @@
 		"start": "npx @11ty/eleventy --serve --quiet",
 		"debug": "DEBUG=Eleventy* npx @11ty/eleventy",
 		"debugstart": "DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
-		"benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
+		"benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
+		"new:today": "f=\"content/today/$(date +%Y-%m-%d).md\"; if [ -f \"$f\" ]; then echo \"Already exists: $f\"; else cp templates/today-post.md \"$f\" && echo \"Created $f\"; fi"
 	},
 	"repository": {
 		"type": "git",

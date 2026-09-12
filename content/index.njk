@@ -4,7 +4,12 @@ eleventyNavigation:
   key: Home
   order: 1
 numberOfLatestPostsToShow: 3
+numberOfLatestTodayPostsToShow: 1
 ---
+<h1>Today</h1>
+{% set postslist = collections.today | head(-1 * numberOfLatestTodayPostsToShow) %}
+{% include "postslist.njk" %}
+
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 <h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
