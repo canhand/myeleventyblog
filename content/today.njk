@@ -6,5 +6,10 @@ eleventyNavigation:
 ---
 <h1>Today</h1>
 
+{% set streakCount = collections.today | streak %}
+{% if streakCount > 0 %}
+<p>🔥 {{ streakCount }}-day streak</p>
+{% endif %}
+
 {% set postslist = collections.today %}
 {% include "postslist.njk" %}

@@ -7,6 +7,10 @@ numberOfLatestPostsToShow: 3
 numberOfLatestTodayPostsToShow: 1
 ---
 <h1>Today</h1>
+{% set streakCount = collections.today | streak %}
+{% if streakCount > 0 %}
+<p>🔥 {{ streakCount }}-day streak</p>
+{% endif %}
 {% set postslist = collections.today | head(-1 * numberOfLatestTodayPostsToShow) %}
 {% include "postslist.njk" %}
 

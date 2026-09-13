@@ -65,6 +65,26 @@ module.exports = function(eleventyConfig) {
 		return Math.min.apply(null, numbers);
 	});
 
+	// Count consecutive daily posts, walking back from today (or yesterday,
+	// so the streak doesn't drop to 0 before today's post is written).
+	eleventyConfig.addFilter("streak", (collection) => {
+		let postDates = new Set(
+			(collection || []).map(post => DateTime.fromJSDate(post.date, { zone: "utc" }).toISODate())
+		);
+
+		let cursor = DateTime.utc().startOf("day");
+		if (!postDates.has(cursor.toISODate())) {
+			cursor = cursor.minus({ days: 1 });
+		}
+
+		let count = 0;
+		while (postDates.has(cursor.toISODate())) {
+			count++;
+			cursor = cursor.minus({ days: 1 });
+		}
+		return count;
+	});
+
 	// Return all the tags used in a collection
 	eleventyConfig.addFilter("getAllTags", collection => {
 		let tagSet = new Set();
