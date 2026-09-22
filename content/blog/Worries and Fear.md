@@ -1,3 +1,13 @@
+---
+title: Worries and Fear
+description: People. They can often be the worst.
+date: 2026-09-15
+tags:
+  - post
+  - self
+draft: false
+permalink:
+---
 ## Premise
 
 Often times, like today morning, my mind is pre occupied with a feeling of fear, worry and being taken for a ride by someone. Is that a feeling that comes out of some real observation? Is it preemptive? Is it a systematic belief?
